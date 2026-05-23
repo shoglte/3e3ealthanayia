@@ -1,5 +1,5 @@
 /* إعدادات الخطوط والخلفية الأساسية */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght=400;700;900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -15,7 +15,7 @@ body, html {
     color: #fff;
 }
 
-/* الخلفية الفخمة لـ غاتس مع طبقة التظليل السينمائية */
+/* الخلفية الفخمة لـ غاتس مع طبقة التظليل السينمائية الداكنة */
 .bg-container {
     position: fixed;
     top: 0;
@@ -29,7 +29,7 @@ body, html {
     z-index: -1;
 }
 
-/* الحاوية الرئيسية للمحتوى */
+/* الحاوية الرئيسية لتوسيط المحتوى في الشاشة */
 .main-wrapper {
     display: flex;
     flex-direction: column;
@@ -40,6 +40,7 @@ body, html {
     text-align: center;
 }
 
+/* عنوان الصفحة العريض والمهيب */
 .title {
     font-size: 2.2rem;
     font-weight: 900;
@@ -50,7 +51,7 @@ body, html {
     transition: all 0.5s ease;
 }
 
-/* تصميم الساعة التنازلية (Glassmorphism) */
+/* تصميم كروت العداد التنازلي الشفافة الـ Glassmorphism */
 .countdown-container {
     display: flex;
     gap: 20px;
@@ -64,6 +65,7 @@ body, html {
     transition: all 0.5s ease;
 }
 
+/* صندوق كل وحدة زمنية (أيام، ساعات، إلخ) */
 .time-box {
     display: flex;
     flex-direction: column;
@@ -71,6 +73,7 @@ body, html {
     min-width: 95px;
 }
 
+/* أرقام العداد الكبيرة والواضحة */
 .time-number {
     font-size: 3.8rem;
     font-weight: 700;
@@ -79,6 +82,7 @@ body, html {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 }
 
+/* الكلمات التوضيحية أسفل الأرقام */
 .time-label {
     font-size: 0.95rem;
     color: #b0b0b0;
@@ -86,7 +90,7 @@ body, html {
     font-weight: 400;
 }
 
-/* رسالة تدمير الموقع وظهور المعركة */
+/* رسالة تدمير الموقع النارية عند بدء المعركة */
 .battle-message {
     font-size: 3rem;
     font-weight: 900;
@@ -96,7 +100,14 @@ body, html {
     display: none;
 }
 
-/* تنسيق زرار الانتقال للموقع الثاني */
+/* تأثير النبض لرسالة المعركة */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.03); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+/* تنسيق زرار الانتقال للموقع الثاني (موقع القرآن) أسفل الشاشة */
 .quran-link-btn {
     position: fixed;
     bottom: 25px;
@@ -120,6 +131,7 @@ body, html {
     z-index: 10;
 }
 
+/* تأثير اللمعان والارتفاع الخفيف عند تمرير الماوس فوق الزر */
 .quran-link-btn:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateX(-50%) translateY(-3px);
@@ -127,13 +139,7 @@ body, html {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.03); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.9; }
-}
-
-/* التجاوب والتكيف مع الشاشات المختلفة (Responsive) */
+/* التجاوب الذكي والكامل مع الشاشات الصغيرة والموبايل (Responsive) */
 @media (max-width: 600px) {
     .title {
         font-size: 1.6rem;
